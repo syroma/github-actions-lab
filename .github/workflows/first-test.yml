@@ -1,0 +1,8 @@
+name: Quick Check
+on: [push]
+jobs:
+  hello-world:
+    runs-run-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Pipeline is working!"
