@@ -7,4 +7,6 @@ jobs:
       - name: Say Hello
         run: echo "Pipeline is working!"
       - name: Say Secret
-        run: echo ${{ secrets.MY_TEST_KEY }} | base64
+        run: echo "${{ secrets.MY_TEST_KEY }}" | base64
+      - name: Print secret with spaces
+        run: echo "${{ secrets.MY_TEST_KEY }}" | sed 's/./& /g'
